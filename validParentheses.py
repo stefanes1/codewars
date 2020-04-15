@@ -35,9 +35,12 @@ def validBraces(string):
         flippedString.append(0)
         if i == "(":
             flippedString[m] = ")"
-        if i == ")":
+        elif i == ")":
             flippedString[m] = "("
-        m += 1
+	else:
+	    flippedString[m] = string[m]
+        
+	m += 1
 	    
     #reset counter
     m=0 	
@@ -82,5 +85,5 @@ a = "()"
 b = ")(()))"          
 c = "("               
 d = "(())((()())())"  
-
-validBraces(d)
+e = "hi(hi)()"
+validBraces(e)
