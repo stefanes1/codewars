@@ -30,7 +30,8 @@ def get_total_primes(a, b):
         i += 1
     
     #final list of primes is every value of 1 in is_prime between is_prime[a] and is_prime[b]
-    j = a              
+    j = a
+
     for i in is_prime[a:]:
         string = str(j)
 
@@ -39,8 +40,9 @@ def get_total_primes(a, b):
         for k in string:
             if k in primes:
                 test_list.append(k)
-            if len(test_list) == len(string):
-                total_prime = True
+
+        if len(test_list) == len(string):
+            total_prime = True
 
         # final check of whether we have a "total prime"
         if total_prime == True and i == 1:
@@ -56,3 +58,7 @@ def get_total_primes(a, b):
         j += 1
         
     return result
+
+a = get_total_primes(500,600)
+
+print(a)
